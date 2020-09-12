@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body
+{
+	background: #f1f1f1;
+	margin: 0;
+	padding: 0px;
+	font-family: arial;
+
+}
+.wrapper
+{
+	max-width: 600px;
+	margin: 0 auto;
+}
+.login-box
+{
+	background: #fff;
+	padding: 20px;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width:300px;
+	box-shadow: 0px 2px 13px #333;
+	
+}
+.row
+{
+padding: 5px 0;
+	overflow: hidden;
+
+}
+.row p
+{
+	
+}
+.row p a
+{
+	color: #333;
+}
+.tcenter
+{
+	text-align: center;
+}
+.left
+{
+	width: 30%;
+	float: left;
+}
+.right
+{
+	width: 70%;
+	float: right;
+}
+.left img
+{
+	max-width: 100%;
+	margin-right: 10px;
+	transition: all linear .5s;
+	transform: scale(.9);
+}
+.left img:hover
+{transform: scale(1);
+}
+input[type="submit"], input[type="button"]
+{
+	background: #333;
+	border: 1px solid #000;
+	color: #fff;
+	padding: 5px 15px;
+	cursor: pointer;
+}

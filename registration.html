@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rishav Login Page</title>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<style>
+	
+	
+</style>
+</head>
+
+<body class="">
+<div class="login-box">
+<h3>User Registration Form</h3>
+<form name="myForm" >
+	<div class="row">
+		<div class="left">Firstname,  :</div>
+		<div class="right"><input type="text" name="abc" onBlur="Textvalidate(this)" placeholder=""></div>
+	</div>
+	<div class="row">
+		<div class="left">lastname :</div>
+		<div class="right"><input type="text" onBlur="Textvalidate(this)" placeholder=""></div>
+	</div>
+	<div class="row">
+		<div class="left">D.O.B :</div>
+		<div class="right"><input type="text" placeholder=""></div>
+	</div>
+	<div class="row">
+		<div class="left">Country of residence :</div>
+		<div class="right"><input type="text" onBlur="Textvalidate(this)" placeholder=""></div>
+	</div>
+	<div class="row">
+		<div class="left">Email :</div>
+		<div class="right"><input type="text" onBlur="emailvalidation(this)" placeholder=""></div>
+	</div>
+		<div class="row">
+		<div class="left">Phone :</div>
+		<div class="right"><input type="text" onBlur="phoneValidation(this)" maxlength="10" placeholder=""></div>
+	</div>
+		<div class="row">
+		<div class="left">Passowrd: </div>
+		<div class="right"><input type="password"></div>
+	</div>
+	<div class="row tcenter">
+		<input type="submit" value="Submit">
+	</div>
+	
+	</form>
+</div>
+<script type="text/javascript">
+	function Textvalidate(element) {
+		if (element.value == "") {
+			alert("This field can't blank");
+			return false;
+		}
+		if (!/^[a-zA-Z]*$/g.test(element.value)) {
+			alert("Invalid characters");
+			return false;
+		}
+	}
+	
+	function phoneValidation(element)
+	{
+		if (element.value == "") {
+			alert("This field can't blank");
+			return false;
+		}
+		if(element.length != 10)
+		{
+			alert("Not Valid phone number, it's should be 10 Degits ");
+			return false;
+		}
+		if (!/^[0-9]*$/g.test(element.value)) {
+			alert("Invalid characters");
+			return false;
+		}
+	}
+	
+	function emailvalidation(element)
+	{
+		if (element.value == "") {
+			alert("This field can't blank");
+			return false;
+		}
+		if (! /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/g.test(element.value)) {
+			alert("Not valid email id");
+			return false;
+		}
+	}
+	
+	</script>
+</body>
+</html>
